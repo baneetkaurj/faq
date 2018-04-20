@@ -1,6 +1,5 @@
 <?php
 $heroku_db_url = parse_url(env('DATABASE_URL', "postgres://forge:forge@localhost:5432/forge"));
-
 return [
 
     /*
@@ -78,7 +77,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
-       'pg-heroku' => [
+        'pg-heroku' => [
             'driver' => 'pgsql',
             'host' => $heroku_db_url['host'],
             'database' => substr($heroku_db_url['path'], 1),
@@ -88,7 +87,6 @@ return [
             'prefix' => '',
             'schema' => 'public',
         ],
-
 
     ],
 
